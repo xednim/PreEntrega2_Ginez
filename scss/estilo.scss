@@ -1,0 +1,189 @@
+@import "variables";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//Esta página (Index) está hecha con Bootstrap
+body{
+    background-image: url(../assets/imágenes/Fondo\ para\ body.png);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+//header de Index
+header{
+    background-color: $negro;
+    height: 150px;
+    nav{
+        .colorPropio{
+            background-color: $negro;
+            padding: 15px;
+            border: 2px solid $negro;
+        }
+        .logoPropio{
+            width: 300px;
+            padding: 5px;
+            margin: 10px;
+        }
+        ul{
+            gap: 25px;
+        }
+            .fondoPropio{
+                &:hover{
+                    background-color: $rojo;
+                    border-top-right-radius: 20px;
+                }
+            }
+        }
+    }
+    //Main de Index
+    main{
+        .recuadroCarrusel{
+            margin: 20px;
+            padding: 10px;
+            border: 10px solid $gris1;
+        }
+    }
+    //Section de Index
+    section{
+        .botonPlay{
+            width: 135px;
+            height: 60px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background-color: rgb(214, 4, 11);
+            padding: 5px;
+            margin: 5px;
+            border-top-right-radius: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .flecha{
+                box-sizing:border-box; 
+                padding: 5px;
+                margin-left: 10px;
+            }
+        }
+    }
+    //Section Index Quiénes somos
+    section{
+        h1, h2{
+            margin-top: 30px;
+            color: $blancostion;
+            text-align: center;
+        }
+        p{
+            color: $blancostion;
+            text-align: center;
+        }
+        img{
+            margin: 10px;
+            padding-top: 15px;
+            &:hover{
+                opacity: 80%;
+            }
+        }
+        .imagenSomos{
+            margin: 20px;
+            padding: 10px;
+            border: 10px solid $gris1;
+        }
+    }
+    //Section Index Propuesta 
+    section{
+        .imagenSection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .imagenMujer{
+            width: 750px;
+            height: 500px;
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid rgb(34, 32, 32);
+        }
+        .estiloPropioTexto{
+            padding: 20px;
+            color: $blancostion;
+            font-size: 1.5rem;
+        }
+    }
+//Footer Index
+footer{
+    background-color: $negro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        color: $blancostion;
+        font-size: 1rem;
+    }
+    .footerInterlineado{
+        line-height: 1%;
+        padding: 10px;
+        margin: 5px;
+    }
+    .redesPropias{
+        color: $blancostion;
+        text-decoration: none;
+        font-size: 3rem;
+        margin: 15px;
+        display:inline-flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    hr{
+        color: $blancostion; 
+    }
+}
+//Estilos generales
+
+//Código para página Nosotros
+.contenedorNosotros {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header header"
+      "main main main main"
+      "main main main main"
+      "section section section aside"
+      "footer footer footer footer";
+  }  
+  .Header-Nosotros{ 
+        grid-area: header;
+        .colorPropio{
+            background-color: $negro;
+        }
+  }  
+  .Main-Nosotros { 
+    grid-area: main;
+    background-color: palevioletred; 
+}
+  
+  .Section-Nosotros { 
+    grid-area: section; 
+}
+  
+  .Aside-Nosotros { 
+    grid-area: aside; 
+}
+  
+  .Footer-Nosotros{ 
+        hr{
+            color: $blancostion;
+        }
+        grid-area: footer;
+        background-color: $negro;
+        height: 30vh;
+        .footerInterlineado{
+            line-height: 1%;
+            padding: 10px;
+            margin: 5px;
+        }
+    }
+  
